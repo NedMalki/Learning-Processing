@@ -1,0 +1,22 @@
+//Randomness Training #002
+
+color[] rainbow = {#ffffcd, #cc5c54, #f69162, #85a562, #7ab5db};
+
+void setup(){
+ size(600,200);
+ smooth();
+ noFill();
+ strokeWeight(5);
+ frameRate(5);
+ background(rainbow[0]);
+}
+
+void draw(){
+  float x=random (width); //goas from 0-max width of window
+  float y=random(height); //goes from 0-max height of window
+  float d=random(30,300); //measuring pixels
+  //"float" is for decimal places <> random functions produce decimal places
+  //stroke (random(255), random(255), random(255));
+  stroke(rainbow[int(random(1,5))]);
+  ellipse(x,y,d,d); 
+}
